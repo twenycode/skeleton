@@ -7,10 +7,19 @@
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/breeze": "^1.28",
+        "jenssegers/agent": "^2.6",
+        "laracasts/flash": "^3.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8"
+        "laravel/tinker": "^2.8",
+        "laravel/ui": "^4.4",
+        "laravelcollective/html": "^6.4",
+        "rappasoft/laravel-authentication-log": "^3.0",
+        "spatie/laravel-activitylog": "^4.7",
+        "spatie/laravel-html": "^3.5",
+        "spatie/laravel-permission": "^6.4",
+        "twenycode/tweny-ui-kit": "^3.0",
+        "vinkla/hashids": "^11.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -22,6 +31,9 @@
         "spatie/laravel-ignition": "^2.0"
     },
     "autoload": {
+        "files": [
+            "app/Helpers/Helper.php"
+        ],
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",

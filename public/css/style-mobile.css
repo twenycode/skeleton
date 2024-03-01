@@ -1,0 +1,80 @@
+/* Styles for screens only */
+@media screen {
+
+    /* Styles for screens with minimum width of 768px */
+    @media screen and (min-width: 768px) {
+        /*Style*/
+    }
+    /* Styles for screens with minimum width of 1024px */
+    @media screen and (min-width: 1024px) {
+        /*Style*/
+    }
+}
+
+/* Styles for print only */
+/*@media print {*/
+/*    body {*/
+/*        font-size: 12px;*/
+/*        color: black;*/
+/*    }*/
+
+/*    img {*/
+/*        max-width: 100%;*/
+/*    }*/
+/*}*/
+
+
+/* Styles for handheld devices (e.g., smartphones, tablets) */
+@media handheld, only screen and (max-width: 768px) {
+    /* HEADER */
+    header .get-started {
+        margin-left:0;
+    }
+    header .navbar-brand {
+        margin-left: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    header .navbar-nav {
+        margin-top: 30px;
+    }
+    header .navbar-toggler {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 10px;
+    }
+    .front-home h1 {
+        font-size: 3rem;
+        line-height:60px;
+    }
+    .caret-icon {
+        position: absolute;
+        left: 152px;
+    }
+    .submenu .nav-link {
+        background: rgba(0,0,0,.06);
+        padding-left: 0;
+    }
+}
+
+
+/* Styles for very small devices (e.g., smartphones, tablets) */
+@media handheld, only screen and (max-width: 575px) {
+    /* HEADER */
+
+    /* Landing page */
+    .front-home h1 {
+        font-size: 2rem;
+        line-height:35px;
+    }
+    .front-home h2 {
+        font-size: 0.9rem;
+        line-height: 20px;
+    }
+    .caret-icon {
+        display:none ;
+    }
+}
+
