@@ -107,12 +107,13 @@ class BaseController extends Controller
     }
 
     // Remove the specified resource from storage.
-    public function destroy($id,$msg = 'Successful deleted')
+    public function destroy($id)
     {
         $this->canDelete();
         try {
-            $this->model->find($this->decode($id))->delete();
-            return $this->success($msg);
+            $object = $this->model->find($this->decode($id));
+            $object->delete();
+            return $this->success('Successful deleted');
         }
         catch (Exception $e) {
             return $this->error($e->getMessage());

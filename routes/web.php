@@ -69,6 +69,10 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('roles',  App\Http\Controllers\Auth\RoleController::class);
         Route::resource('permissions',  App\Http\Controllers\Auth\PermissionController::class);
 
+        //  Location Routes
+        Route::resource('countries', \App\Http\Controllers\Admin\Location\CountryController::class);
+        Route::get('/address',[\App\Http\Controllers\Admin\Location\AddressController::class, 'index'])->name('addresses');
+
         //  User Logs
         Route::resource('activity-logs',  \App\Http\Controllers\Admin\UserLog\ActivityLogController::class);
         Route::resource('authentication-logs',  \App\Http\Controllers\Admin\UserLog\AuthenticationLogController::class);

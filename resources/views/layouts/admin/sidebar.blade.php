@@ -38,6 +38,32 @@
         <!-----------------------
         /  ACCESS CONTROL
         ------------------------->
+        @canany(['address_view','country_view'])
+            <li class="nav-item">
+                <a href="#location" data-bs-toggle="collapse" class="nav-link align-middle ">
+                    <i class="bi bi-geo-alt"></i>
+                    <span class="ms-1 d-none d-sm-inline">Location</span>
+                    <span class="caret-icon bi bi-caret-down"></span>
+                </a>
+                <ul class="collapse nav flex-column ms-1 submenu" id="location" data-bs-parent="#menu">
+                    @permissionTo(['country_view'])
+                    <li>
+                        <a href="{{route('admin.countries.index')}}" class="nav-link">Countries</a>
+                    </li>
+                    @endpermissionTo
+
+                    @permissionTo(['address_view'])
+                    <li>
+                        <a href="{{route('admin.addresses')}}" class="nav-link">Address</a>
+                    </li>
+                    @endpermissionTo
+                </ul>
+            </li>
+        @endcanany
+
+        <!-----------------------
+        /  ACCESS CONTROL
+        ------------------------->
         @canany(['role_view','permission_view','admin_view','user_view'])
             <li class="nav-item">
                 <a href="#acl" data-bs-toggle="collapse" class="nav-link align-middle ">
@@ -121,8 +147,6 @@
                     @endpermissionTo
                 </ul>
             </li>
-
-
         @endcanany
     </ul>
     <hr>
